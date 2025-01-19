@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hábits - Mel</title>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+
+  <h1>🧩 Hábits - Gestor de Hábitos</h1>
+
+  <!-- Sección superior: Avatar, Vidas, Energía y Estrés -->
+  <div id="top-container">
+    <div id="status-container">
+      <div id="avatar-name">👩🏼‍🍳 Mel</div>
+      <div id="avatar-level">🦹🏼‍♀️ Beginner</div>
+      <div id="lives-counter">❤️ Vidas: <span id="lives">5</span>/5</div>
+      <div id="energy-counter">🔋 Energía: <span id="energy">100</span>/100</div>
+      <div id="stress-counter">🪫 Oxidative Stress: <span id="stress">0</span>/100</div>
+    </div>
+
+    <!-- Calendario alineado a la derecha -->
+    <div id="calendar-container">
+      <button onclick="prevMonth()">⬅️</button>
+      <span id="current-month"></span>
+      <button onclick="nextMonth()">➡️</button>
+      <div id="calendar"></div>
+
+      <!-- Carrera de 20 km -->
+      <div id="run-container">
+        <h3>🏃‍♂️ Carrera de 20 km</h3>
+        <progress id="run-progress" value="0" max="20"></progress>
+        <button onclick="addRun()">Añadir 1 km</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor principal con tres columnas -->
+  <div id="main-container" class="columns">
+    
+    <!-- Columna de Good Habits -->
+    <div id="good-habits" class="column">
+      <h2>🌱 Good Habits</h2>
+      <div class="habit"><h3>🛏️ Sleep 7–8h</h3><div class="checkboxes" id="sleep"></div></div>
+      <div class="habit"><h3>🧘🏼‍♀️ Meditation & Respiration</h3><div class="checkboxes" id="meditation"></div></div>
+      <div class="habit"><h3>🍎 Eat Well</h3><div class="checkboxes" id="eat"></div></div>
+      <div class="habit"><h3>🏋️‍♂️ Work Out</h3><div class="checkboxes" id="workout"></div></div>
+      <div class="habit"><h3>📚 Study</h3><div class="checkboxes" id="study"></div></div>
+      <div class="habit"><h3>💡 Learn Something New</h3><div class="checkboxes" id="learn"></div></div>
+      <div class="habit"><h3>💰 $</h3><div class="checkboxes" id="money"></div></div>
+      <div class="habit"><h3>🧬 Biohacking Tools</h3><div class="checkboxes" id="biohacking"></div></div>
+      <div class="habit"><h3>💼 Work</h3><div class="checkboxes" id="work"></div></div>
+    </div>
+
+    <!-- Columna de Bad Habits -->
+    <div id="bad-habits" class="column">
+      <h2>⛔️ Bad Habits</h2>
+      <div class="habit bad"><h3>🛏️ Sleep -7h</h3><div class="checkboxes" id="sleepLess"></div></div>
+      <div class="habit bad"><h3>🍔 Food Porn</h3><div class="checkboxes" id="foodPorn"></div></div>
+      <div class="habit bad"><h3>📱 Social Media +60'</h3><div class="checkboxes" id="socialMedia"></div></div>
+      <div class="habit bad"><h3>📺 TV</h3><div class="checkboxes" id="tv"></div></div>
+      <div class="habit bad"><h3>💭 Negative Thoughts</h3><div class="checkboxes" id="negativeThoughts"></div></div>
+    </div>
+
+   <!-- Columna de Oxidative Stress -->
+<div id="oxidative-stress" class="column">
+  <h2>🌪️ Oxidative Stress</h2>
+  <div class="habit"><h3>💰 Financial Problems</h3><div class="checkboxes" id="Financial Problems"></div></div>
+  <div class="habit"><h3>🦠 Health Inconvenients</h3><div class="checkboxes" id="Health Inconvenients"></div></div>
+  <div class="habit"><h3>❤️‍🩹 Family Noun Unexpected</h3><div class="checkboxes" id="Family Noun Unexpected"></div></div>
+  <div class="habit"><h3>🤞🏼 Friends to Solve</h3><div class="checkboxes" id="Friends to Solve"></div></div>
+  <div class="habit"><h3>☠️ Work Pressure</h3><div class="checkboxes" id="Work Pressure"></div></div>
+</div>
+
+
+  </div> <!-- Cierre de #main-container -->
+
+  <!-- Archivo JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

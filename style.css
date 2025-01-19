@@ -1,0 +1,206 @@
+/* Diseño general */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Contenedor superior */
+#top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Estadísticas (energía y estrés oxidativo) */
+.stats {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Avatar */
+#avatar-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#avatar-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#avatar-image.energetic {
+  transform: scale(1.1); /* Más grande si está feliz */
+}
+
+#avatar-image.tired {
+  filter: grayscale(50%); /* Tono gris si está cansado */
+}
+
+/* Calendario alineado a la derecha */
+#calendar-container {
+  width: 250px;
+  text-align: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendario */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 30px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.day {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.day.good {
+  background-color: #b6fcb6;
+}
+
+.day.bad {
+  background-color: #fcb6b6;
+}
+
+.day:active {
+  transform: translateY(2px); /* Efecto hundido al hacer clic */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+  background-color: #e0e0e0; /* Color más oscuro al presionar */
+}
+
+/* Carrera debajo del calendario */
+#run-container {
+  margin-top: 20px;
+}
+
+#run-progress {
+  width: 150px;
+  height: 20px;
+}
+
+#run-container button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Contenedor principal de hábitos */
+#main-container {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme entre columnas */
+  gap: 20px; /* Separación entre columnas */
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Columnas */
+.column {
+  width: 30%; /* Todas las columnas tienen el mismo ancho */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* Títulos de columnas */
+.column h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Tarjetas de hábitos individuales */
+.habit {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de los hábitos */
+.habit h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+  text-align: left;
+}
+
+/* Contenedor de casillas */
+.checkboxes {
+  display: flex;
+  justify-content: left;
+  gap: 5px; /* Espaciado entre casillas */
+}
+
+/* Casillas de verificación */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: green; /* Color por defecto para hábitos buenos */
+}
+
+.habit.bad input[type="checkbox"] {
+  accent-color: red; /* Color rojo para malos hábitos */
+}
+
+.red-checkbox {
+  accent-color: red; /* Color rojo específico */
+}
+
+/* Ajuste de contenedores múltiples */
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* Casillas de estrés oxidativo */
+input.red-checkbox {
+  accent-color: red; /* Color rojo específico */
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+/* Día actual (resaltado) */
+.day.today {
+  background-color: #ffeeba; /* Color de fondo */
+  border: 2px solid #f5c542; /* Borde amarillo */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Día completado (tachado) */
+.day.completed {
+  text-decoration: line-through; /* Texto tachado */
+  background-color: #d4edda; /* Fondo verde claro */
+  color: #155724; /* Texto verde oscuro */
+}
+
